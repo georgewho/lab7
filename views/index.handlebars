@@ -36,6 +36,22 @@
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
 
+
+		{{#if viewAlt}}
+		{{#each projects}}
+			<div class="project" id="{{id}}">
+				<div class="thumbnail">
+					<a href="/project/{{id}}">
+						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
+						<h4>{{title}}</h4>
+					</a>
+					Min!<button class="likeBtn">Like</button>
+					<div class="details"></div>
+				</div>
+			</div>
+		{{/each}}
+
+		{{else}}
 		<h4>Projects</h4>
 		{{#each projects}}
 			<div class="project" id="{{id}}">
@@ -49,6 +65,8 @@
 				</div>
 			</div>
 		{{/each}}
+
+		{{/if}}
 
 
 </body>
